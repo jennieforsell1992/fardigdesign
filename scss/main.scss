@@ -1,58 +1,58 @@
-html,
-body {
-  margin: 0;
-  background-color: gray;
-}
+@use "reset";
+@use "variables" as var;
+@use "mixins" as mix;
 
-.menu-btn {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-  transition: all 5s ease-in-out;
+.container {
+  background: url(../assets/negative-space-black-forest-dawn.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: var.$primary;
 
-  .menu-btn__burger {
-    width: 50px;
-    height: 6px;
-    background: white;
-    border-radius: 5px;
+  nav {
+    display: flex;
+    justify-content: flex-end;
 
-    transition: all 5s ease-in-out;
-  }
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 6px;
-    background: white;
-    border-radius: 5px;
+    ul {
+      text-decoration: none;
+      list-style: none;
+      border-bottom-style: none;
 
-    transition: all 0.5s ease-in-out;
+      a:link {
+        color: var.$primary;
+        text-decoration: none;
+      }
+      a:visited {
+        color: var.$primary;
+      }
+    }
   }
 
-  .menu-btn__burger::before {
-    transform: translateY(-16px);
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+
+    h3,
+    p {
+      padding: 13px;
+    }
+
+    .container-icon {
+      @include mix.paddingicon;
+
+      i {
+        @include mix.icon;
+      }
+    }
   }
 
-  .menu-btn__burger::after {
-    transform: translateY(16px);
-  }
-
-  .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-  }
-
-  .menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

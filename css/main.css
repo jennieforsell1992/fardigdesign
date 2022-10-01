@@ -1,52 +1,52 @@
-html,
-body {
+* {
   margin: 0;
-  background-color: gray;
 }
 
-.menu-btn {
-  position: relative;
+.container {
+  background: url(../assets/negative-space-black-forest-dawn.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+}
+.container nav {
   display: flex;
+  justify-content: flex-end;
+}
+.container nav ul {
+  text-decoration: none;
+  list-style: none;
+  border-bottom-style: none;
+}
+.container nav ul a:link {
+  color: white;
+  text-decoration: none;
+}
+.container nav ul a:visited {
+  color: white;
+}
+.container main {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
+  margin-top: 130px;
+}
+.container main h3,
+.container main p {
+  padding: 13px;
+}
+.container main .container-icon {
+  padding: 180px;
+}
+.container main .container-icon i {
   cursor: pointer;
-  transition: all 5s ease-in-out;
 }
-.menu-btn .menu-btn__burger {
-  width: 50px;
-  height: 6px;
-  background: white;
-  border-radius: 5px;
-  transition: all 5s ease-in-out;
-}
-.menu-btn .menu-btn__burger::before,
-.menu-btn .menu-btn__burger::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 6px;
-  background: white;
-  border-radius: 5px;
-  transition: all 0.5s ease-in-out;
-}
-.menu-btn .menu-btn__burger::before {
-  transform: translateY(-16px);
-}
-.menu-btn .menu-btn__burger::after {
-  transform: translateY(16px);
-}
-.menu-btn .menu-btn.open .menu-btn__burger {
-  transform: translateX(-50px);
-  background: transparent;
-  box-shadow: none;
-}
-.menu-btn .menu-btn.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
-.menu-btn .menu-btn.open .menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
+.container .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */
