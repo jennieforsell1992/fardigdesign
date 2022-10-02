@@ -30,23 +30,93 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 130px;
+  margin-top: 170px;
+  text-align: center;
 }
 .container main h3,
 .container main p {
-  padding: 13px;
+  font-size: 18pt;
+  padding: 30px;
+  text-align: center;
 }
 .container main .container-icon {
-  padding: 180px;
+  padding-top: 280px;
 }
 .container main .container-icon i {
   cursor: pointer;
 }
-.container .about {
+
+.about {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.about h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.about h5 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.about img {
+  border-radius: 50%;
+  height: 40%;
+  width: 40%;
+}
+.about .fact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 30px;
+  padding: 5px;
+  width: 320px;
+  height: 130px;
+  background-color: lightgray;
+  border-radius: 2%;
+}
+.about span:first-child {
+  font-size: 80pt;
+}
+.about .container-icon a:hover {
+  color: black;
+}
+.about .container-icon a:visited {
+  color: black;
+}
+.about .container-icon i {
+  cursor: pointer;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 10%;
+}
+.contact footer {
+  padding-bottom: 20px;
+}
+.contact footer .info,
+.contact footer .mail,
+.contact footer .socialmedia {
+  color: white;
+  padding-top: 30px;
+}
+.contact footer .info p,
+.contact footer .mail p,
+.contact footer .socialmedia p {
+  padding: 5px;
+}
+.contact footer .info p i,
+.contact footer .mail p i,
+.contact footer .socialmedia p i {
+  letter-spacing: 17px;
 }
 
 /*# sourceMappingURL=main.css.map */

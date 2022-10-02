@@ -1,6 +1,8 @@
 @use "reset";
 @use "variables" as var;
 @use "mixins" as mix;
+@use "about";
+@use "contact";
 
 .container {
   background: url(../assets/negative-space-black-forest-dawn.jpg);
@@ -33,26 +35,91 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 130px;
+    margin-top: 170px;
+    text-align: center;
 
     h3,
     p {
-      padding: 13px;
+      font-size: 18pt;
+      padding: 30px;
+      text-align: center;
     }
 
     .container-icon {
-      @include mix.paddingicon;
+      padding-top: 280px;
 
       i {
         @include mix.icon;
       }
     }
   }
+}
 
-  .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    @include about.topmargin;
+  }
+
+  img {
+    @include about.pictures;
+  }
+
+  .fact {
+    @include about.box;
+  }
+
+  span:first-child {
+    @include about.mark;
+  }
+
+  .container-icon {
+    a:hover {
+      color: var.$secondary;
+    }
+
+    a:visited {
+      color: var.$secondary;
+    }
+
+    i {
+      @include mix.icon;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var.$secondary;
+  padding: 10%;
+
+  footer {
+    padding-bottom: 20px;
+
+    .info,
+    .mail,
+    .socialmedia {
+      @include contact.contactstyle;
+
+      p {
+        @include contact.pstyle;
+
+        i {
+          letter-spacing: 17px;
+        }
+      }
+    }
   }
 }

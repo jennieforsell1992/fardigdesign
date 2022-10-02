@@ -1,0 +1,28 @@
+@mixin pictures {
+  border-radius: 50%;
+  height: 40%;
+  width: 40%;
+}
+
+@mixin box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 30px;
+  padding: 5px;
+  width: 320px;
+  height: 130px;
+  background-color: lightgray;
+  border-radius: 2%;
+}
+
+@mixin mark {
+  font-size: 80pt;
+}
+
+@mixin topmargin {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

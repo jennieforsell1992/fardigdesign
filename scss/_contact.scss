@@ -1,0 +1,10 @@
+@use "variables" as var;
+
+@mixin contactstyle {
+  color: var.$primary;
+  padding-top: 30px;
+}
+
+@mixin pstyle {
+  padding: 5px;
+}
